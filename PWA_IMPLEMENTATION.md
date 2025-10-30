@@ -2,7 +2,7 @@
 
 ## ✅ Deployment Successful
 
-**Production URL:** https://trail-7tyaguo52-amelia751s-projects.vercel.app
+**Production URL:** https://www.trailplanner101.com
 
 **Inspect Dashboard:** https://vercel.com/amelia751s-projects/trail/5Z7afE1NhLqNpRT6faNmMJnJ3T2U
 
@@ -53,7 +53,7 @@
 ## 📱 How It Works
 
 ### First Visit (Online Required)
-1. User visits **trail-7tyaguo52-amelia751s-projects.vercel.app**
+1. User visits **www.trailplanner101.com**
 2. Service worker installs automatically
 3. Core assets cached (HTML, CSS, JS, manifest)
 4. "Install Trail" prompt appears (if supported)
@@ -75,7 +75,7 @@
 ## 🧪 Testing Offline Mode
 
 ### Method 1: Browser DevTools
-1. Open **trail-7tyaguo52-amelia751s-projects.vercel.app**
+1. Open **www.trailplanner101.com**
 2. Open Chrome DevTools (F12)
 3. Go to **Network** tab
 4. Check **"Offline"** checkbox
@@ -217,7 +217,7 @@ Backend (Online Only):
 
 ## 🔗 Quick Links
 
-- **Live App:** https://trail-7tyaguo52-amelia751s-projects.vercel.app
+- **Live App:** https://www.trailplanner101.com
 - **GitHub:** https://github.com/amelia751/trail
 - **Vercel Dashboard:** https://vercel.com/amelia751s-projects/trail
 

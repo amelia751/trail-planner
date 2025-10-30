@@ -53,7 +53,7 @@ Once redeployed, test the API endpoints:
 
 ### Test 1: Visit the App
 ```
-https://trail-7tyaguo52-amelia751s-projects.vercel.app
+https://www.trailplanner101.com
 ```
 
 ### Test 2: Create a Trip
@@ -75,7 +75,7 @@ https://trail-7tyaguo52-amelia751s-projects.vercel.app
 
 ## 📊 Current Deployment
 
-**URL:** https://trail-7tyaguo52-amelia751s-projects.vercel.app
+**URL:** https://www.trailplanner101.com
 
 **Status:** 
 - ✅ PWA features working
