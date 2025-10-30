@@ -1,7 +1,7 @@
 // Google Maps API integration for accurate GPS routes and landmarks
 // Combined with Gemini for contextual knowledge base
 
-const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY || '';
+const GOOGLE_MAPS_API_KEY = (process.env.GOOGLE_MAPS_API_KEY || '').trim();
 
 interface Coordinates {
   latitude: number;
