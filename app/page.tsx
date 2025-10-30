@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import dynamic from 'next/dynamic';
 import { checkAICapabilities } from '@/lib/ai';
+import { InstallPrompt } from '@/components/InstallPrompt';
+import { OfflineIndicator } from '@/components/OfflineIndicator';
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
@@ -20,6 +22,8 @@ export default function LandingPage() {
 
   return (
     <main className="min-h-screen bg-paper-white">
+      <OfflineIndicator />
+      <InstallPrompt />
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
           {/* Logo */}

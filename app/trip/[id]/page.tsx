@@ -133,7 +133,7 @@ ${trip.trailData.waypoints.map(wp => `- ${wp.name} (${wp.type}): ${wp.descriptio
         message: inputMessage,
         context,
         image: selectedImage || undefined,
-        useServerFallback: false, // Force Chrome AI only
+        gps: currentPosition || undefined,
       });
 
       const assistantMessage: ChatMessage = {
