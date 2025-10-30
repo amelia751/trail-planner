@@ -2,7 +2,7 @@
 
 > Built for **Google Chrome Built-in AI Challenge 2025**
 
-**Live Demo:** https://trail-ashy.vercel.app
+**Live Demo:** https://www.trailplanner101.com
 
 Trail is a Progressive Web App that leverages Chrome's Built-in AI (Gemini Nano) to provide an **intelligent, offline-capable trip planning and navigation assistant**. Pre-plan your outdoor adventures with AI while online, then navigate and get real-time assistance completely offline.
 
@@ -166,7 +166,7 @@ GOOGLE_MAPS_API_KEY=your_google_maps_api_key
 
 ### Quick Test (5 minutes)
 
-1. Visit https://trail-ashy.vercel.app
+1. Visit https://www.trailplanner101.com
 2. Check Chrome AI status on landing page
 3. Create trip with Quick Fill: **🏃 Running** (Schuylkill River)
 4. Wait ~30s for generation
@@ -292,10 +292,10 @@ MIT License - feel free to use for your own projects!
 
 ## 🔗 Links
 
-- **Live Demo:** https://trail-ashy.vercel.app
+- **Live Demo:** https://www.trailplanner101.com
 - **GitHub:** https://github.com/amelia751/trail
 - **Architecture:** [ARCHITECTURE.md](./ARCHITECTURE.md)
-- **Chrome AI Setup:** https://trail-ashy.vercel.app/install
+- **Chrome AI Setup:** https://www.trailplanner101.com/install
 
 ---
 
