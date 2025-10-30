@@ -1,15 +1,18 @@
 // Service Worker for Trail PWA
 // Enables offline functionality by caching assets
 
-const CACHE_NAME = 'trail-v1';
-const RUNTIME_CACHE = 'trail-runtime-v1';
+const CACHE_NAME = 'trail-v2';
+const RUNTIME_CACHE = 'trail-runtime-v2';
 
 // Assets to cache on install
 const PRECACHE_ASSETS = [
   '/',
   '/install',
   '/trips',
+  '/trip/new',
   '/manifest.json',
+  '/icon-192.png',
+  '/icon-512.png',
 ];
 
 // Install event - precache core assets
@@ -68,22 +71,34 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // Skip authentication and external requests
+  if (url.origin !== self.location.origin) {
+    return;
+  }
+
   // Network-first strategy for HTML (always get fresh content when online)
   if (request.headers.get('accept')?.includes('text/html')) {
     event.respondWith(
-      fetch(request)
+      fetch(request, { cache: 'no-cache' })
         .then((response) => {
-          // Clone and cache the response
-          const responseClone = response.clone();
-          caches.open(RUNTIME_CACHE).then((cache) => {
-            cache.put(request, responseClone);
-          });
+          // Only cache successful responses
+          if (response.ok) {
+            const responseClone = response.clone();
+            caches.open(RUNTIME_CACHE).then((cache) => {
+              cache.put(request, responseClone);
+            });
+          }
           return response;
         })
         .catch(() => {
           // If network fails, try cache
           return caches.match(request).then((cached) => {
-            return cached || caches.match('/');
+            if (cached) {
+              console.log('📦 Serving cached HTML:', url.pathname);
+              return cached;
+            }
+            // Fallback to root
+            return caches.match('/');
           });
         })
     );

@@ -48,9 +48,9 @@ export default function LandingPage() {
                     autoplay={true}
                   />
                 </div>
-                <p className="text-[10px] font-medium text-offblack text-center leading-tight px-1">
-                  Get Chrome Dev
-                </p>
+                        <p className="text-[10px] font-medium text-offblack text-center leading-tight px-1">
+                          Get Chrome AI
+                        </p>
               </div>
               <div className="absolute top-1 left-1 bg-offblack text-white text-[9px] font-bold px-1 py-0.5 rounded">
                 1

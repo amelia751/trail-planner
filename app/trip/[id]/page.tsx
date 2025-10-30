@@ -263,7 +263,7 @@ ${trip.trailData.waypoints.map(wp => `- ${wp.name} (${wp.type}): ${wp.descriptio
           <TabsContent value="agent" className="flex-1 mt-4">
             <Card className="h-full flex flex-col">
               {/* Messages */}
-              <div className="flex-1 overflow-y-auto p-4 space-y-4">
+              <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[calc(100vh-300px)]">
                 {messages.map((msg) => (
                   <div
                     key={msg.id}
@@ -417,11 +417,11 @@ ${trip.trailData.waypoints.map(wp => `- ${wp.name} (${wp.type}): ${wp.descriptio
           )}
         </div>
 
-        {/* Right: Chat */}
-        <div className="flex-1 flex flex-col">
-          <Card className="flex-1 flex flex-col">
-            {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+              {/* Right: Chat */}
+              <div className="flex-1 flex flex-col">
+                <Card className="flex-1 flex flex-col max-h-[calc(100vh-150px)]">
+                  {/* Messages */}
+                  <div className="flex-1 overflow-y-auto p-4 space-y-4">
               {messages.map((msg) => (
                 <div
                   key={msg.id}
