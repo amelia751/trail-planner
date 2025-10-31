@@ -388,12 +388,17 @@ I learned that a great app isn't complete until it's reliably deployed:
 - Chrome Canary (Dev/Canary) with Prompt API enabled
 - Flags: `chrome://flags/#prompt-api-for-gemini-nano` + `chrome://flags/#optimization-guide-on-device-model`
 
-📝 **Quick Start:**
-1. Visit the live demo
-2. Check Chrome AI status
-3. Create a trip with Quick Fill (🏃 Running or 🥾 Hiking)
-4. Start the trip and explore GPS simulation
-5. Chat with AI: "What plants might I see?" or upload a photo
+### Testing Instructions
+
+**Quick Test (3 minutes):**
+
+1. **Create Trip:** Visit the demo → Click "Plan New Trip" → Use Quick Fill (🏃 Running or 🥾 Hiking) → Click "Create Trip" → Wait ~30s for generation
+2. **Start GPS:** Open your trip from the dashboard → Click "Start Trip" → Hit the **Play** button on GPS tracker
+3. **Chat with AI:** Ask questions like:
+   - "What plants might I see here?"
+   - "How do I treat a bee sting?"
+   - Upload a photo: "What is this?" (use images from `public/test_images/hiking/`)
+4. **Test Offline:** Open DevTools → Network tab → Check "Offline" → Chat still works! ✅
 
 ---
 
