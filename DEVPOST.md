@@ -8,49 +8,15 @@ A hybrid, multimodal web application that acts as your offline trail companion -
 
 ## What problem is your submission addressing?
 
-Outdoor adventurers face a critical dilemma: they need intelligent assistance most when they have it least. Traditional navigation and AI apps fail in remote areas due to lack of connectivity, yet that's precisely where hikers, runners, and cyclists need help identifying plants, treating injuries, understanding wildlife, and making navigation decisions.
+Outdoor adventurers need intelligent assistance most when they have it least—in remote areas without connectivity. Cloud AI apps (ChatGPT, Google Assistant) fail offline. Offline apps (AllTrails, Gaia GPS) lack conversational AI and can't answer dynamic questions or identify photos.
 
-Existing solutions fall short in two ways:
+**Trail uses a hybrid architecture to solve this:**
 
-**❌ Cloud-Only AI Apps** (ChatGPT, Google Assistant)
-- Require constant internet connectivity
-- Useless in remote wilderness areas
-- Can't provide context-aware trail assistance offline
-- Expensive API costs for continuous queries
+**🌐 Server-Side (Online):** Google Maps Routes API + Places API generate accurate routes and real landmarks. Google Gemini API creates comprehensive, trip-specific knowledge bases (first aid, flora/fauna, navigation tips). All stored locally in IndexedDB.
 
-**❌ Offline-Only Apps** (AllTrails, Gaia GPS)
-- Limited to pre-downloaded static content
-- No conversational AI interface
-- Can't answer dynamic questions or identify photos
-- Lack personalized, trip-specific knowledge
+**📱 Client-Side (Offline):** Chrome Built-in AI (Gemini Nano) provides instant, multimodal responses on-device. Service Worker + PWA ensure full offline functionality. MapLibre renders maps without server requests.
 
-### The Hybrid Solution
-
-Trail solves this by combining **server-side intelligence** for data quality with **client-side AI** for offline capability:
-
-**🌐 Server-Side (Online Planning Phase):**
-- **Google Maps Routes API** generates professional-grade GPS paths following actual roads and trails
-- **Google Places API** discovers real landmarks and points of interest within 500m of the route
-- **Google Gemini API** creates comprehensive, trip-specific knowledge bases (2000-4000 words covering first aid, local flora/fauna, weather, navigation, and safety)
-- All data is processed, validated, and stored locally in IndexedDB for offline use
-
-**📱 Client-Side (Offline Execution Phase):**
-- **Chrome Built-in AI (Gemini Nano)** provides instant, on-device conversational responses
-- **Multimodal capabilities** allow users to upload photos for plant/wildlife identification
-- **GPS-aware context** injects current position and nearby landmarks into AI prompts
-- **Service Worker + PWA** ensures the entire UI works offline
-- **MapLibre GL JS** renders interactive maps without server requests
-
-### Why Hybrid is Superior
-
-This architecture delivers what neither approach can achieve alone:
-
-✅ **Quality + Availability:** Real-world map data (server) + always-on AI assistant (client)  
-✅ **Intelligence + Privacy:** Powerful knowledge generation (server) + on-device inference (client)  
-✅ **Accuracy + Speed:** Verified landmarks from Google (server) + zero-latency responses (client)  
-✅ **Rich Context + No Data Costs:** Comprehensive trip preparation (server) + unlimited offline queries (client)
-
-The result is a **professional outdoor companion** that works anywhere—from city trails with 5G to remote wilderness with zero bars—demonstrating the true potential of hybrid AI architectures.
+**Result:** Professional data quality (server) + zero-latency AI that works anywhere (client)—demonstrating the true potential of hybrid AI architectures.
 
 ---
 
