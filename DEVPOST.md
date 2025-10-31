@@ -2,6 +2,56 @@
 
 **Tagline:** Your offline trail companion powered by Chrome's Built-in AI - plan, navigate, and explore with confidence, even without internet.
 
+A hybrid, multimodal web application that acts as your offline trail companion - plan, navigate, and explore with confidence, even without internet.
+
+---
+
+## What problem is your submission addressing?
+
+Outdoor adventurers face a critical dilemma: they need intelligent assistance most when they have it least. Traditional navigation and AI apps fail in remote areas due to lack of connectivity, yet that's precisely where hikers, runners, and cyclists need help identifying plants, treating injuries, understanding wildlife, and making navigation decisions.
+
+Existing solutions fall short in two ways:
+
+**❌ Cloud-Only AI Apps** (ChatGPT, Google Assistant)
+- Require constant internet connectivity
+- Useless in remote wilderness areas
+- Can't provide context-aware trail assistance offline
+- Expensive API costs for continuous queries
+
+**❌ Offline-Only Apps** (AllTrails, Gaia GPS)
+- Limited to pre-downloaded static content
+- No conversational AI interface
+- Can't answer dynamic questions or identify photos
+- Lack personalized, trip-specific knowledge
+
+### The Hybrid Solution
+
+Trail solves this by combining **server-side intelligence** for data quality with **client-side AI** for offline capability:
+
+**🌐 Server-Side (Online Planning Phase):**
+- **Google Maps Routes API** generates professional-grade GPS paths following actual roads and trails
+- **Google Places API** discovers real landmarks and points of interest within 500m of the route
+- **Google Gemini API** creates comprehensive, trip-specific knowledge bases (2000-4000 words covering first aid, local flora/fauna, weather, navigation, and safety)
+- All data is processed, validated, and stored locally in IndexedDB for offline use
+
+**📱 Client-Side (Offline Execution Phase):**
+- **Chrome Built-in AI (Gemini Nano)** provides instant, on-device conversational responses
+- **Multimodal capabilities** allow users to upload photos for plant/wildlife identification
+- **GPS-aware context** injects current position and nearby landmarks into AI prompts
+- **Service Worker + PWA** ensures the entire UI works offline
+- **MapLibre GL JS** renders interactive maps without server requests
+
+### Why Hybrid is Superior
+
+This architecture delivers what neither approach can achieve alone:
+
+✅ **Quality + Availability:** Real-world map data (server) + always-on AI assistant (client)  
+✅ **Intelligence + Privacy:** Powerful knowledge generation (server) + on-device inference (client)  
+✅ **Accuracy + Speed:** Verified landmarks from Google (server) + zero-latency responses (client)  
+✅ **Rich Context + No Data Costs:** Comprehensive trip preparation (server) + unlimited offline queries (client)
+
+The result is a **professional outdoor companion** that works anywhere—from city trails with 5G to remote wilderness with zero bars—demonstrating the true potential of hybrid AI architectures.
+
 ---
 
 ## Inspiration
